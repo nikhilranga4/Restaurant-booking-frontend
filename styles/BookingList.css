@@ -1,0 +1,87 @@
+/* BookingList.css */
+
+/* General container for the booking list */
+.booking-list {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.booking-list h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Styling for the individual booking cards */
+.booking-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.booking-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    margin: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.booking-card p strong {
+    color: #2c3e50;
+}
+
+/* Styling for the delete button */
+.delete-btn {
+    background-color: #81524c;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1900;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .booking-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .booking-list h2 {
+        font-size: 24px;
+    }
+
+    .delete-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

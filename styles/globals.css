@@ -1,0 +1,376 @@
+/* styles/globals.css */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font family and general styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #000000;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fa6565;
+  color: white;
+  border: none;
+  padding: 10px 9px;
+  font-size: 13px;
+  border-radius: 12px;
+  transition: background-color 0.7s ease;
+}
+
+button:hover {
+  background-color: #6aeca0;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Booking form container */
+.booking-form {
+  max-width: 490px;
+  margin: 0px auto;
+  background: linear-gradient(135deg, #f8f7f7, #e7ebeb);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.head1{
+  color: #000000;
+}
+/* Form labels and inputs */
+.booking-form label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  color: #000000;
+}
+.booking-form input:value{
+  color: #000000;
+}
+.booking-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.booking-form input:focus {
+  box-shadow: 0 0 5px rgba(39, 174, 96, 0.8);
+  border-color: #27ae60;
+}
+
+/* Centering the button */
+.button-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Animated button */
+.animated-button {
+  background-color: white;
+  color: #000000;
+  padding: 15px 30px;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.animated-button:hover {
+  background-color: #010101;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Form fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success page */
+.success-page {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.success-page h2 {
+  font-size: 28px;
+  color: #2ecc71;
+  animation: fadeIn 1s ease-out;
+}
+
+.success-page p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.success-page .booking-summary {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 30px;
+  animation: slideIn 1s ease-out;
+}
+
+.booking-summary h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.booking-summary p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.booking-summary p strong {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.actions button {
+  font-size: 1rem;
+  padding: 12px 25px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.view-bookings-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.view-bookings-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Bookings page */
+.bookings-page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bookings-page h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.bookings-page .booking-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.booking-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.booking-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.booking-card .delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-card .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.booking-card .view-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-card .view-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Back button styling */
+.back-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e45f5f;
+  border-radius: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .success-page,
+  .booking-summary {
+    padding: 14px;
+    padding-left: 19px;
+  }
+
+  .success-page h2 {
+    font-size: 2rem;
+  }
+
+  .booking-summary {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .actions button {
+    font-size: 0.8rem;
+    padding: 7px 15px;
+  }
+
+  .back-button,
+  .view-bookings-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .booking-card {
+    width: 100%;
+  }
+}
