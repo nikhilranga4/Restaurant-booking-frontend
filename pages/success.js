@@ -9,12 +9,15 @@ const SuccessPage = () => {
   const [booking, setBooking] = useState(null);
 
   useEffect(() => {
-    // Fetch the booking details from localStorage or redirect if no booking found
-    const bookingData = JSON.parse(localStorage.getItem('booking'));
-    if (bookingData) {
-      setBooking(bookingData);
-    } else {
-      router.push('/'); // Redirect to the form if no booking is found
+    // Check if we are running in the client-side (browser)
+    if (typeof window !== 'undefined') {
+      // Fetch the booking details from localStorage or redirect if no booking found
+      const bookingData = JSON.parse(localStorage.getItem('booking'));
+      if (bookingData) {
+        setBooking(bookingData);
+      } else {
+        router.push('/'); // Redirect to the form if no booking is found
+      }
     }
   }, [router]);
 

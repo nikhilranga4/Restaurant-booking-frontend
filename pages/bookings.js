@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import BookingList from '/Users/nikhil/Desktop/tony/restaurant-booking-frontend/components/BookingList';
+import BookingList from '../components/BookingList';  // Adjust the path if necessary
 
 const BookingsPage = () => {
   const [bookings, setBookings] = useState([]);
